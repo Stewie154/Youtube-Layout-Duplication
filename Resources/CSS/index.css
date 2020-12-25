@@ -3,12 +3,15 @@
     padding: 0;
     margin: 0;
 }
+body {
+    background-color: #F9F9F9;
+}
 
 .grid-container {
     display: grid;
     height: 100vh;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 10% 25% 45% 20%; 
+    grid-template-rows: 10% 25% 53% 12%; 
     grid-template-areas: 
     " Nav-Bar Nav-Bar "
     " Main Advert "
@@ -16,12 +19,14 @@
     " Video-Info Suggested-Vids";
 }
 
+/* nav bar */ 
 nav {
     grid-area: Nav-Bar;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
 }
 
 nav .left {
@@ -95,12 +100,16 @@ nav .right button {
 .right button img {
     width: 20%;
 }
+
+/* main video display */
 main {
     grid-area: Main;
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+iframe {
+    align-self: flex-end;
 }
 
 .advert {
@@ -119,11 +128,30 @@ main {
     align-items: center;
 }
 
-.video-info {
+.video-info-container {
     grid-area: Video-Info;
     background-color: seagreen;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.video-info {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.video-options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+
 }
 
